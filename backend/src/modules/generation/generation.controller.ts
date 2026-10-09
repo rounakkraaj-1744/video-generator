@@ -1,14 +1,23 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { GenerationService } from './generation.service';
-import { CreateGenerationDto } from './dto/create-generation.dto';
-import { UpdateGenerationDto } from './dto/update-generation.dto';
+import { GenerationService } from "./generation.service";
+import type { Request, Response } from "express";
 
-@Controller('generation')
 export class GenerationController {
-  constructor(private readonly generationService: GenerationService) {}
+    constructor (private readonly generationService: GenerationService) {}
 
-  @Post()
-  generate (@Body() body: CreateGenerationDto){
-    return this.generationService.generate(body);
-  }
+    async generate (req: Request, res: Response) {
+        try {
+            const result = await this.generationService.generateVideo(req.body);
+            res.json ({
+                success: true,
+                project: result
+            })
+        } catch (error) {
+            console.error (error)
+
+            res.status(500).json({
+                success: false,
+                message: "Failed to generate video project"
+            })
+        }
+    }
 }
