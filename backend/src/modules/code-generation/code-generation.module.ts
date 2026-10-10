@@ -1,5 +1,5 @@
 import { GroqService } from "../../infra/llm/groq.service";
-import { CodeGenerationService } from "./code-generation.service.service";
+import { CodeGenerationService } from "./code-generation.service"
 
 const groqService = new GroqService();
 
