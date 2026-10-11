@@ -1,30 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import {
-  IconArrowLeft,
-  IconArrowUp,
-  IconBolt,
-  IconChevronDown,
-  IconCode,
-  IconCopy,
-  IconDownload,
-  IconDots,
-  IconLayoutSidebar,
-  IconMicrophone,
-  IconPlayerPause,
-  IconPlayerPlay,
-  IconPlayerTrackNext,
-  IconPlayerTrackPrev,
-  IconPlus,
-  IconRotate2,
-  IconRotateClockwise2,
-  IconSettings,
-  IconPencil,
-  IconShare,
-  IconTrash,
-  IconTopologyStar3,
-  IconX,
-} from "@tabler/icons-react";
+import { IconArrowLeft, IconArrowUp, IconBolt, IconChevronDown, IconCode, IconCopy, IconDownload, IconDots, IconLayoutSidebar, IconMicrophone, IconPlayerPause, IconPlayerPlay, IconPlayerTrackNext, IconPlayerTrackPrev, IconPlus, IconRotate2, IconRotateClockwise2, IconSettings, IconPencil, IconShare, IconTrash, IconTopologyStar3, IconX } from "@tabler/icons-react";
 import { generateProject } from "../src/lib/api/generation";
 import type { GenerationRequest, Scene, VideoProject } from "../src/lib/types/video-project";
 import { GenerationLoader } from "../components/generation/GenerationLoader";
@@ -674,8 +650,8 @@ function Composer(p: {
       </div>
       <div className="mt-4">
         <div className="mb-2 flex items-center justify-between">
-          <span className="text-xs text-[var(--text-tertiary)]">Examples</span>
-          <button className="text-xs text-[var(--text-secondary)]">Shuffle</button>
+          <span className="text-xs text-(--text-tertiary)">Examples</span>
+          <button className="text-xs text-(--text-secondary)">Shuffle</button>
         </div>
         <div className="grid gap-1 lg:grid-cols-2">
           {starters.map(([name, text, lang]) => (
