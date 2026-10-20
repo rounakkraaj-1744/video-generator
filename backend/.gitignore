@@ -32,8 +32,11 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # Finder (MacOS) folder config
 .DS_Store
-/terraform/.terraform/
-/terraform/build/
-/terraform/.terraform.lock.hcl
-/terraform/outputs.tf
-/terraform/terraform.tfvars
+
+# Terraform generated files and secrets
+**/.terraform/
+**/build/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfvars
+!**/*.tfvars.example
