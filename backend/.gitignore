@@ -36,3 +36,4 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 /terraform/build/
 /terraform/.terraform.lock.hcl
 /terraform/outputs.tf
+/terraform/terraform.tfvars
