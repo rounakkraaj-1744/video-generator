@@ -15,7 +15,7 @@ resource "aws_iam_role" "lambda_execution" {
     }]
   })
 
-  tags = local.common_tags
+  # tags = local.common_tags
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_logs" {

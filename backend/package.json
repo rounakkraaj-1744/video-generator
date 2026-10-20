@@ -25,6 +25,7 @@
     "zod": "^4.6.5"
   },
   "scripts": {
-    "dev": "bun index.ts --watch"
+    "dev": "bun index.ts --watch",
+     "build": "rm -rf ../dist && bun build ./src/modules/generation/generate.handler.ts --outfile ./dist/generation/index.js --target node --format cjs --external '@aws-sdk/*' && bun build ./src/modules/code-generation/code-generation.handler.ts --outfile ./dist/code-generation/index.js --target node --format cjs --external '@aws-sdk/*'"
   }
 }

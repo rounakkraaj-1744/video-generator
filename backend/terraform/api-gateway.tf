@@ -2,7 +2,7 @@ resource "aws_apigatewayv2_api" "http" {
   name          = "${local.name_prefix}-api"
   protocol_type = "HTTP"
 
-  tags = local.common_tags
+  # tags = local.common_tags
 }
 
 resource "aws_apigatewayv2_integration" "generation" {
@@ -42,7 +42,7 @@ resource "aws_apigatewayv2_stage" "default" {
   name        = "$default"
   auto_deploy = true
 
-  tags = local.common_tags
+  # tags = local.common_tags
 }
 
 resource "aws_lambda_permission" "generation_api" {

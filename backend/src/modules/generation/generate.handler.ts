@@ -2,7 +2,6 @@ import type {APIGatewayProxyEventV2, APIGatewayProxyStructuredResultV2} from "aw
 import { GeminiService } from "../../infra/llm/gemini.service"
 import { GenerationService } from "./generation.service"
 import { type GenerateVideoRequest } from "./generation.types"
-import { success } from "zod";
 
 const gemini = new GeminiService();
 const generationService = new GenerationService(gemini);
